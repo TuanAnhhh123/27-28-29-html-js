@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function timCapSoTongBangSoNhap(mang, soNhap) {
+        let capSo = [];
+
+        for (let i = 0; i < mang.length; i++) {
+          let soCanTim = soNhap - mang[i];
+
+          for (let j = i + 1; j < mang.length; j++) {
+            if (mang[j] === soCanTim) {
+              capSo.push([mang[i], mang[j]]);
+              return capSo; 
+            }
+          }
+        }
+
+        return capSo;
+      }
+      let mangSoNguyen = prompt(
+        "Nhập mảng số nguyên, cách nhau bằng dấu phẩy (ví dụ: 1,2,3): "
+      )
+        .split(",")
+        .map(Number);
+
+      let soNhap = parseInt(prompt("Nhập số nguyên cần tìm cặp: "));
+
+      let ketQua = timCapSoTongBangSoNhap(mangSoNguyen, soNhap);
+
+      if (ketQua.length > 0) {
+        console.log(
+          `Cặp số có tổng bằng ${soNhap}: [${ketQua[0][0]}, ${ketQua[0][1]}]`
+        );
+      } else {
+        console.log(`Không có cặp số nào có tổng bằng ${soNhap}.`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function kiemTraChanLe(so) {
+        if (so % 2 === 0) {
+        return "Số " + so + " là số chẵn.";
+    } else {
+        return "Số " + so + " là số lẻ.";
+    }
+    }
+
+
+    function khoiTaoVaInKetQua() {
+        for (var i = 0; i < 3; i++) {
+            var soNgauNhien = parseInt(Math.random() * 100 + 1);
+            var ketQua = kiemTraChanLe(soNgauNhien);
+            console.log(ketQua);
+        }
+    }
+
+    khoiTaoVaInKetQua();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function locchuoimang(mang, chuoi) {
+        let ketqua = [];
+
+        for (let i = 0; i < mang.length; i++) {
+          if (mang[i].includes(chuoi)) {
+            ketqua.push(mang[i]);
+          }
+        }
+
+        return ketqua;
+      }
+      let mangchuoi = ["táo", "chuối", "kiwi", "dâu", "cam","xoài"];
+
+      let chuoinhap = prompt("Nhập vào một chuỗi:");
+
+      let ketqua = locchuoimang(mangchuoi, chuoinhap);
+      console.log("Các phần tử trong mảng chứa chuỗi là:", ketqua);
+    </script>
+  </body>
+</html>
